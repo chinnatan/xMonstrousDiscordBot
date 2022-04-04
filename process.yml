@@ -1,0 +1,8 @@
+apps:
+  - script   : 'main.js'
+    name     : 'x-monstrous-bot'
+    exec_mode: 'cluster'
+    instances: 1
+    env_production:
+      PORT: 3000
+      NODE_ENV: 'production'

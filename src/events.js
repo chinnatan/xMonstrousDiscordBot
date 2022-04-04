@@ -1,3 +1,8 @@
+player.on('ready', (queue, error) => {
+    console.log("TEST")
+    queue.setVolume(client.config.opt.defaultVol)
+});
+
 player.on('error', (queue, error) => {
     console.log(`Error emitted from the queue ${error.message}`);
 });
@@ -8,7 +13,14 @@ player.on('connectionError', (queue, error) => {
 
 player.on('trackStart', (queue, track) => {
     if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
-    queue.metadata.send(`Started playing ${track.title} in **${queue.connection.channel.name}** 🎧`);
+
+    // กำหนด bot status
+    client.user.setActivity(`กำลังเล่น ${track.title} ใน **${queue.connection.channel.name}** 🎧`);
+
+    // กำหนด Default Volume เมื่อเพลงเริ่ม
+    queue.setVolume(client.config.opt.defaultVol)
+
+    queue.metadata.send(`กำลังเล่น ${track.title} ใน **${queue.connection.channel.name}** 🎧`);
 });
 
 player.on('trackAdd', (queue, track) => {

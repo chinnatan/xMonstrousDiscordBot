@@ -11,6 +11,7 @@ module.exports = {
             roleName: 'DJ',
             commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'seek', 'shuffle', 'skip', 'stop', 'volume']
         },
+        defaultVol: 25,
         maxVol: 100,
         loopMessage: false,
         discordPlayer: {

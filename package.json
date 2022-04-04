@@ -14,5 +14,9 @@
     "ffmpeg-static": "^4.4.0",
     "ms": "^3.0.0-canary.1",
     "opusscript": "^0.0.8"
+  },
+  "ffmpeg-static": {
+    "binary-release-tag": "b5.0",
+    "binary-release-name": "5.0"
   }
 }
