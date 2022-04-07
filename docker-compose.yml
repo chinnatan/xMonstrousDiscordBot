@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  x-monstrous-discord-bot:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: x-monstrous-discord-bot
