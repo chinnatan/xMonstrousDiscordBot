@@ -1,3 +1,4 @@
 # Node
 node_modules/
 .vscode/settings.json
+config.js
