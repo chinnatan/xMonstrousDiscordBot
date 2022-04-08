@@ -1,8 +1,3 @@
-player.on('ready', (queue, error) => {
-    console.log("TEST")
-    queue.setVolume(client.config.opt.defaultVol)
-});
-
 player.on('error', (queue, error) => {
     console.log(`Error emitted from the queue ${error.message}`);
 });
